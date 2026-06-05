@@ -14,7 +14,7 @@ public class BlogAppRepository {
     }
 
     public List<BlogApp> findAll(){
-        return jdbcClient.sql("SELECT title, body, name FROM blogs").query(BlogApp.class).list();
+        return jdbcClient.sql("SELECT id, title, body, name FROM blogs").query(BlogApp.class).list();
     }
 
     public void save(BlogApp blogApp){

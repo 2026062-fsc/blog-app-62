@@ -5,7 +5,7 @@
 }
 
 body {
-    padding: 30px;
+    padding: 0px 30px;
     color: #000000;
     font-family: sans-serif;
     background-color: #ffffff;
@@ -13,12 +13,12 @@ body {
 
 
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  list-style: none;
-  border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    list-style: none;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .site-header h1 {
@@ -28,15 +28,15 @@ body {
 }
 
 .header-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 16px;
+    display: flex;
+    list-style: none;
+    gap: 16px;
 }
 
 .header-nav a {
     font-size: 16px;
     text-decoration: none;
-    color: #292929; 
+    color: #292929;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -45,4 +45,61 @@ h1.page-title {
     font-size: 20px;
     margin-bottom: 20px;
     color: #333333;
+}
+
+/* ブログリスト */
+.bloglist {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 30px 10px;
+}
+
+
+.bloglist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.bloglist .blog.list {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.295);
+}
+
+
+
+.bloglist .blog.list h3 {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-size: 1.3rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bloglist .blog.list p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+
+.empty-message {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+    color: #6c757d;
+    font-size: 1.1rem;
+    border: 2px dashed #dee2e6;
 }

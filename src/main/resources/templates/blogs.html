@@ -15,12 +15,24 @@
         </div>
         <nav class="header-nav">
             <ul>
-                <li><a href="/">ホーム</a></li>
-                <li><a href="/">ブログ一覧</a></li>
-                <li><a href="/">ブログ追加</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">BLOG LIST</a></li>
+                <li><a href="/">ADD BLOG</a></li>
             </ul>
         </nav>
     </header>
+    <div class="bloglist" th:if="${!#lists.isEmpty(blogList)}">
+        <ul>
+            <li th:each="blog : ${blogList}" class="blog list">
+                <h3 th:text="${blog.title}">タイトル</h3>
+                <p th:text="${#strings.abbreviate(blog.body, 30)}">本文</p>
+            </li>
+        </ul>
+    </div>
+    <div class="empty-message" th:if="${#lists.isEmpty(blogList)}">
+        投稿はありません
+    </div>
+
 
 
 
