@@ -1,6 +1,7 @@
 package com.example.blog_app;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -23,5 +24,9 @@ public class BlogAppService {
             throw new IllegalArgumentException("ブログ内容がありません");
         }
         blogAppRepository.save(new BlogApp(null, form.getTitle(), form.getBody(), form.getName()));
+    }
+
+    public Optional<BlogApp> findById(Long id){
+        return blogAppRepository.findById(id);
     }
 }

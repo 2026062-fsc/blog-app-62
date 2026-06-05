@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/blogstyle.css">
     <title>All Blogs</title>
 </head>
-
 <body>
     <header class="site-header">
         <div class="header-logo">
@@ -21,25 +20,17 @@
             </ul>
         </nav>
     </header>
-    <div class="bloglist" th:if="${!#lists.isEmpty(blogList)}">
-        <ul>
-            <li th:each="blog : ${blogList}" class="blog list">
-                <h3>
-                    <a th:href="@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">タイトル</a>
-                </h3>
 
-                <p th:text="${#strings.abbreviate(blog.body, 40)}">本文</p>
-                <p th:text="${blog.name}">作成者</p>
-            </li>
-        </ul>
+    <div class="blogdetail" >
+        
+            <div class="detail">
+                <h3 th:text="${blogdetail.title}">タイトル</h3>
+                <p th:text="${blogdetail.body}">本文</p>
+            </div>
+        
     </div>
-    <div class="empty-message" th:if="${#lists.isEmpty(blogList)}">
+    <!-- <div class="empty-message" th:if="${#lists.isEmpty(blogList)}">
         投稿はありません
-    </div>
-
-
-
-
+    </div> -->
 </body>
-
 </html>

@@ -63,8 +63,9 @@ h1.page-title {
 
 
 .bloglist .blog.list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 25px;
     background: #ffffff;
     border-radius: 8px;
     padding: 30px;
@@ -82,6 +83,13 @@ h1.page-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.blog.list a {
+    text-decoration: underline;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
 }
 
 .bloglist .blog.list p {
@@ -102,4 +110,73 @@ h1.page-title {
     color: #6c757d;
     font-size: 1.1rem;
     border: 2px dashed #dee2e6;
+}
+
+/* 詳細表示 */
+.blogdetail div {
+    margin: 30px;
+    overflow-wrap: break-word;
+
+}
+
+.blogdetail h3 {
+    font-size: 40px;
+    margin: 70px 0px;
+}
+
+.blogdetail p {
+    font-size: 20px;
+}
+
+/* new */
+
+.form-group {
+    margin-bottom: 10px; 
+}
+
+#title, #name {
+    display: block;
+    margin: 15px 40px 15px 15px;
+    padding: 15px;
+    width: 40%;
+    border: 1px solid #00000052;
+    border-radius: 4px;
+}
+#body{
+    margin: 0px 40px 15px 15px;
+    padding: 15px;
+    width: 95%;
+    height: 570px;
+    border: 1px solid #00000052;
+    border-radius: 4px;
+}
+
+#title::placeholder, #name::placeholder, #body::placeholder {
+    color: #bbb; 
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 15px 15px 15px;
+}
+
+.submit-btn {
+    padding: 8px 16px;
+    background-color: #1d68ae;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cancel-btn:hover {
+    text-decoration: underline;
 }
