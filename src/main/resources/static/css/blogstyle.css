@@ -8,7 +8,7 @@ body {
     padding: 0px 30px;
     color: #000000;
     font-family: sans-serif;
-    background-color: #ffffff;
+    background-color: #bbbbbb;
 }
 
 
@@ -39,6 +39,35 @@ body {
     color: #292929;
     font-weight: 500;
     transition: color 0.3s;
+}
+
+.h-sp {
+    font-size: 100px;
+    border-bottom: 1px solid #3d3d3d;
+    margin: 80px 0px 0px 50px;
+}
+
+.h-bl{
+    font-size: 100px;
+    border-bottom: 1px solid #3d3d3d;
+    margin: 0px 0px 80px 182px;
+}
+
+.home-nav {
+    margin: 90px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #292929;
+
+}
+
+.home-nav li {
+    list-style: none;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: #292929;
 }
 
 h1.page-title {
@@ -116,12 +145,22 @@ h1.page-title {
 .blogdetail div {
     margin: 30px;
     overflow-wrap: break-word;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.295);
 
 }
 
 .blogdetail h3 {
     font-size: 40px;
-    margin: 70px 0px;
+    margin: 30px 0px 45px 0px;
+}
+
+.blogdetail h2 {
+    font-size: 20px;
+    margin: 20px 0px 30px 0px;
 }
 
 .blogdetail p {
@@ -131,10 +170,11 @@ h1.page-title {
 /* new */
 
 .form-group {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-#title, #name {
+#title,
+#name {
     display: block;
     margin: 15px 40px 15px 15px;
     padding: 15px;
@@ -142,7 +182,8 @@ h1.page-title {
     border: 1px solid #00000052;
     border-radius: 4px;
 }
-#body{
+
+#body {
     margin: 0px 40px 15px 15px;
     padding: 15px;
     width: 95%;
@@ -151,8 +192,10 @@ h1.page-title {
     border-radius: 4px;
 }
 
-#title::placeholder, #name::placeholder, #body::placeholder {
-    color: #bbb; 
+#title::placeholder,
+#name::placeholder,
+#body::placeholder {
+    color: #bbb;
 }
 
 .button-group {

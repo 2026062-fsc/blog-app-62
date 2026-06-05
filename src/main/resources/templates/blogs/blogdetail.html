@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/blogstyle.css">
-    <title>All Blogs</title>
+    <title>Blog Detail</title>
 </head>
 <body>
     <header class="site-header">
         <div class="header-logo">
-            <h1>Spring Blogs</h1>
+            <h1>SPR1NG B1OG</h1>
         </div>
         <nav class="header-nav">
             <ul>
-                <li><a href="/blogs">HOME</a></li>
+                <li><a href="/home">HOME</a></li>
                 <li><a href="/blogs">BLOG LIST</a></li>
                 <li><a href="/blogs/new">ADD BLOG</a></li>
             </ul>
@@ -25,6 +25,7 @@
         
             <div class="detail">
                 <h3 th:text="${blogdetail.title}">タイトル</h3>
+                <h2 th:text="${blogdetail.name}"></h2>
                 <p th:text="${blogdetail.body}">本文</p>
             </div>
         

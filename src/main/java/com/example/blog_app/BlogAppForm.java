@@ -16,4 +16,16 @@ public class BlogAppForm {
     public String getName() {
         return name;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

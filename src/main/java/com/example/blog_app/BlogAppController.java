@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -20,6 +22,12 @@ public class BlogAppController {
     public BlogAppController(BlogAppService blogAppService){
         this.blogAppService = blogAppService;
     }
+
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
+    
 
 
     @GetMapping("/blogs")
@@ -42,13 +50,13 @@ public class BlogAppController {
     
     @GetMapping("/blogs/new")
     public String tasknew(Model model){
-        model.addAttribute("blogsForm", new BlogAppForm());
+        model.addAttribute("blogForm", new BlogAppForm());
         return "blogs/new";
     }
 
     @PostMapping("/blogs")
     public String createBlog(@ModelAttribute BlogAppForm blogForm) {
         blogAppService.add(blogForm);
-        return "redirect:/tasks";
+        return "redirect:/blogs";
     }
 }
