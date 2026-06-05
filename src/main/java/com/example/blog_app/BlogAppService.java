@@ -23,8 +23,9 @@ public class BlogAppService {
         if(form.getBody() == null){
             throw new IllegalArgumentException("ブログ内容がありません");
         }
-        
+
         blogAppRepository.save(new BlogApp(null, form.getTitle(), form.getBody(), form.getName()));
+    
     }
 
     public Optional<BlogApp> findById(Long id){

@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 
 @Controller
@@ -28,8 +25,6 @@ public class BlogAppController {
         return "home";
     }
     
-
-
     @GetMapping("/blogs")
     public String Allblogs(Model model) {
         List<BlogApp> blogList = blogAppService.findAll();
