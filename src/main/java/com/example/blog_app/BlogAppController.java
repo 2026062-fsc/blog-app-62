@@ -44,7 +44,7 @@ public class BlogAppController {
     }
     
     @GetMapping("/blogs/new")
-    public String tasknew(Model model){
+    public String blognew(Model model){
         model.addAttribute("blogForm", new BlogAppForm());
         return "blogs/new";
     }
